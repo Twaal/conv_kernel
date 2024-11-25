@@ -1,8 +1,8 @@
-kernel_1:
-  # Sobel Gx
-  - [-1, 0, 1]
-  - [-2, 0, 2]
-  - [-1, 0, 1]
+# kernel:
+#   # Sobel Gx
+#   - [-1, 0, 1]
+#   - [-2, 0, 2]
+#   - [-1, 0, 1]
 
 kernel:
   # Sobel Gy
