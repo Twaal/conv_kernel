@@ -35,8 +35,10 @@ This is a command-line program that applies a convolution kernel to an image.
 
 ```bash
 python apply_conv_kernel.py images/Lena.jpg kernel_config.yaml
+```
 
 ## Example (macOS / Linux)
 
 ```bash
 python3 apply_conv_kernel.py images/Lena.jpg kernel_config.yaml
+```
