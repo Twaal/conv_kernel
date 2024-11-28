@@ -31,7 +31,12 @@ This is a command-line program that applies a convolution kernel to an image.
 
     Replace `<image_path>` with the path to your image file and `<config_path>` with the path to your YAML configuration file.
 
-## Example
+## Example (Windows)
 
 ```bash
-python apply_conv_kernel.py image.jpg kernel_config.yaml
+python apply_conv_kernel.py images/Lena.jpg kernel_config.yaml
+
+## Example (macOS / Linux)
+
+```bash
+python3 apply_conv_kernel.py images/Lena.jpg kernel_config.yaml
