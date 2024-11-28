@@ -11,9 +11,9 @@ def apply_conv_kernel(img, kernel):
       kernel: A NumPy array representing the convolution kernel.
 
     Returns:
-      The filtered image as a NumPy array.
+      The filtered image as a NumPy array (8-bit unsigned).
     """
-    filtered_img = cv2.filter2D(img, -1, kernel)
+    filtered_img = cv2.filter2D(img, cv2.CV_8U, kernel)
     print(f"Applied kernel:\n{kernel}")
     return filtered_img
 
