@@ -13,9 +13,12 @@ def apply_conv_kernel(img, kernel):
     Returns:
       The filtered image as a NumPy array (8-bit unsigned).
     """
-    filtered_img = cv2.filter2D(img, cv2.CV_8U, kernel)
+    filtered_img = cv2.filter2D(img, cv2.CV_16S, kernel)
+    
+    normalized_img = cv2.normalize(filtered_img, None, 0, 255, cv2.NORM_MINMAX, cv2.CV_8U)
+    
     print(f"Applied kernel:\n{kernel}")
-    return filtered_img
+    return normalized_img
 
 def load_image_grayscale(image_path):
   """Loads an image from the specified path in grayscale.
