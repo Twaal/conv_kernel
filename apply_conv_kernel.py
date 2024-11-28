@@ -11,7 +11,7 @@ def apply_conv_kernel(img, kernel):
       kernel: A NumPy array representing the convolution kernel.
 
     Returns:
-      The filtered image as a NumPy array (8-bit unsigned).
+      The filtered and normalized image as a NumPy array (8-bit unsigned).
     """
     filtered_img = cv2.filter2D(img, cv2.CV_16S, kernel)
     
