@@ -41,11 +41,10 @@ def main():
         config = yaml.safe_load(f)
     kernel = np.array(config['kernel'])
 
-    print(f"Applied kernel:\n{kernel}\nto image:\n{args.image_path}")
-
     # Apply the kernel
     filtered_img = apply_conv_kernel(args.image_path, kernel)
-
+    print(f"Applied kernel:\n{kernel}\nto image:\n{args.image_path}")
+    
     # Display the filtered image
     cv2.imshow('Filtered Image', filtered_img)
     cv2.waitKey(0)
