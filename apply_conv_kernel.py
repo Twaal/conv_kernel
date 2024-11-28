@@ -23,7 +23,6 @@ def apply_conv_kernel(image_path, kernel):
 
     # Apply the kernel using filter2D
     filtered_img = cv2.filter2D(img, -1, kernel)
-
     return filtered_img
 
 def main():
