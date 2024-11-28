@@ -13,7 +13,7 @@ def apply_conv_kernel(img, kernel):
     Returns:
       The filtered and normalized image as a NumPy array (8-bit unsigned).
     """
-    filtered_img = cv2.filter2D(img, cv2.CV_16S, kernel)
+    filtered_img = cv2.filter2D(img, cv2.CV_32F, kernel)
     
     filtered_img = cv2.normalize(filtered_img, None, 0, 255, cv2.NORM_MINMAX, cv2.CV_8U)
     
