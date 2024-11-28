@@ -15,10 +15,10 @@ def apply_conv_kernel(img, kernel):
     """
     filtered_img = cv2.filter2D(img, cv2.CV_16S, kernel)
     
-    normalized_img = cv2.normalize(filtered_img, None, 0, 255, cv2.NORM_MINMAX, cv2.CV_8U)
+    filtered_img = cv2.normalize(filtered_img, None, 0, 255, cv2.NORM_MINMAX, cv2.CV_8U)
     
     print(f"Applied kernel:\n{kernel}")
-    return normalized_img
+    return filtered_img
 
 def load_image_grayscale(image_path):
   """Loads an image from the specified path in grayscale.
